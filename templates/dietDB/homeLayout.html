@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VIRTUAL DIET RECOMANDATION SYSTEM</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+
+  </head>
+<body>
+  <header>
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container" id="diet">
+        <div class="navbar-brand">
+            <a href="/index"><h1>VIRTUAL DIET RECOMANDATION SYSTEM</h1></a>
+        </div>
+        <div class="navbar-header">
+
+          <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+           <ul id="nav-list" class="nav navbar-nav navbar-right">
+            <li id="navHomeButton" class="visible-xs active">
+              <a href="/index">
+                <span class="glyphicon glyphicon-home"></span> Home</a>
+            </li>
+            <li id="navMenuButton">
+              <a href="/myBMI">
+                <span class="glyphicon glyphicon-tasks"></span><br class="hidden-xs">MY BMI</a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs"> ABOUT-US</a>
+            </li>
+            <li>
+              <a href="/Logout">
+                <span class="glyphicon glyphicon-log-in"></span><br class="hidden-xs"> LOG-OUT</a>
+            </li>
+
+          </ul><!-- #nav-list -->
+        </div><!-- .collapse .navbar-collapse -->
+      </div><!-- .container -->
+    </nav><!-- #header-nav -->
+  </header>
+
+{% block content %}
+
+{% endblock %}
+
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          24 X 7 hr online Service
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Features:</span><br>
+          Make your Diet plan any time from any where conviniet way for creating own diet plan in busy life.
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>
+            "Eat Right,
+             Work Hard,
+             Feel Good"
+          </p>
+          <p>"Amazing platform to make your Diet plans."</p>
+        </section>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="{{url_for('static',filename='jquery-2.1.4.min.js')}}"></script>
+  <script src="{{url_for('static',filename='bootstrap.min.js')}}"></script>
+  <script src="{{url_for('static',filename='ajax-utils.js')}}"></script>
+  <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+</html>

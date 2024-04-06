@@ -1,0 +1,44 @@
+{% extends "layouts.html"%}
+
+{% block content %}
+
+
+
+  <div id="main-content" class="container">
+
+    <form name="BMIForm" action="/bmi_cal" method="POST" class="col-lg-4" onsubmit="BMI()">
+     <div class="form-group">
+       <label>Name</label>
+       <input name="name" type="text" class="form-control" placeholder="Enter Name" required="">
+     </div>
+     <div class="form-group">
+      <label>Gender</label>
+       <div class="radio">
+          <label><input type="radio" name="gender" value="male" >Male</label>
+        </div>
+         <div class="radio">
+          <label><input type="radio" name="gender" value="female" >Female</label>
+        </div>
+      </div>
+     <div class="form-group">
+      <label>Height</label>
+      <input name="Height" type="text" class="form-control" placeholder="Enter Height" required="">
+      </div>
+      <div class="form-group">
+      <label>Weight</label>
+      <input name="Weight" type="text" class="form-control" placeholder="Enter Weight" required="">
+      </div>
+      <div class="form-group">
+      <label>Age</label>
+      <input name="Age" type="text" class="form-control" placeholder="Enter Age" required="">
+      </div>
+      <div class="form-group">
+      <input type="submit" class="form-control" placeholder="Submit">
+      </div>
+      </form>
+      <div id="out" class="col-lg-4">
+        {{ result }}
+      </div>
+  </div>
+
+{% endblock%}

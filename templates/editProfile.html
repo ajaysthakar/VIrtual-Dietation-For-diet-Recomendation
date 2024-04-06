@@ -1,0 +1,54 @@
+{% extends "homeLayout.html" %}
+
+{% block content %}
+
+
+
+
+  <div id="main-content" class="container">
+  <form action="/update" method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>First Name</label>
+      <input name="fname" type="text" value="{{ user[1]}}" class="form-control" id="inputname" placeholder="First Name" required="">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Last Name</label>
+      <input name="lname" type="text" value="{{ user[2]}}"  class="form-control" id="inputEname" placeholder="Last Name" required="">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Email</label>
+      <input name="email" type="email" value="{{ user[3]}}" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label >Password</label>
+      <input name="password" type="password" value="{{ user[4]}}"  class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+    <div class="form-group col-md-12">
+      <label >Address</label>
+      <input name="address" type="textarea" value="{{ user[5]}}"  class="form-control" id="inputAddress" placeholder="Address" required="">
+    </div>
+    <div class="form-group col-md-4">
+      <label >Age</label>
+      <input name="age" type="text" value="{{ user[6]}}"  class="form-control" id="inputAge" placeholder="Age" required="">
+    </div>
+    <div class="form-group col-md-4">
+      <label >Height</label>
+      <input name="height" type="text" value="{{ user[7]}}"  class="form-control" id="inputHeight" placeholder="Height" required="">
+    </div>
+    <div class="form-group col-md-4">
+      <label >Weight</label>
+      <input name="weight" type="text" value="{{ user[8]}}"  class="form-control" id="inputWeight" placeholder="Weight" required="">
+    </div>
+
+	<div class="form-group">
+      <input type="submit" class="form-control" placeholder="Submit">
+      </div>
+  </div>
+
+
+</form>
+
+  </div>
+
+{% endblock%}

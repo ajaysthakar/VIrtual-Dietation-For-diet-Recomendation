@@ -1,0 +1,90 @@
+{% extends "layouts.html"%}
+
+{% block content %}
+
+
+
+
+  <div id="main-content" class="container">
+  <form action="/register" method="POST">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label>First Name</label>
+      <input name="fname" type="text" class="form-control" id="inputname" placeholder="First Name" required="">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Last Name</label>
+      <input name="lname" type="text" class="form-control" id="inputEname" placeholder="Last Name" required="">
+    </div>
+    <div class="form-group col-md-6">
+      <label>Email</label>
+      <input name="email" type="email" class="form-control" id="inputEmail" placeholder="Email">
+    </div>
+    <div class="form-group col-md-6">
+      <label >Password</label>
+      <input name="password" type="password" class="form-control" id="inputPassword" placeholder="Password">
+    </div>
+    <div class="form-group col-md-12">
+      <label >Address</label>
+      <input name="address" type="textarea" class="form-control" id="inputAddress" placeholder="Address" required="">
+    </div>
+    <div class="form-group col-md-4">
+      <label >Age</label>
+      <input name="age" type="text" class="form-control" id="inputAge" placeholder="Age" required="">
+    </div>
+    <div class="form-group col-md-4">
+      <label >Height</label>
+      <input name="height" type="text" class="form-control" id="inputHeight" placeholder="Height" required="">
+    </div>
+    <div class="form-group col-md-4">
+      <label >Weight</label>
+      <input name="weight" type="text" class="form-control" id="inputWeight" placeholder="Weight" required="">
+    </div>
+	<div class="form-group col-md-4">
+      <label>Gender</label>
+       <div class="radio">
+          <label><input type="radio" name="gender" value="male" >Male</label>
+        </div>
+         <div class="radio">
+          <label><input type="radio" name="gender" value="female" >Female</label>
+        </div>
+      </div>
+	<div class="form-group col-md-4">
+      <label>Type of food</label>
+       <div class="radio">
+          <label><input type="radio" name="food" value="VEG" >VEG</label>
+        </div>
+         <div class="radio">
+          <label><input type="radio" name="food" value="NONVEG" >NONVEG</label>
+        </div>
+      </div>
+      <div class="form-group col-md-4">
+          <label>Act</label>
+           <div class="radio">
+              <label><input type="radio" name="act" value="Sedentary (little or no exercise)" >Sedentary (little or no exercise)</label>
+            </div>
+             <div class="radio">
+              <label><input type="radio" name="act" value="Lightly active (1-3 days/week)" >Lightly active (1-3 days/week)</label>
+            </div>
+            <div class="radio">
+             <label><input type="radio" name="act" value="Moderately active (3-5 days/week)" >Moderately active (3-5 days/week)</label>
+           </div>
+           <div class="radio">
+            <label><input type="radio" name="act" value="Very active (6-7 days/week)" >Very active (6-7 days/week)</label>
+          </div>
+          <div class="radio">
+           <label><input type="radio" name="act" value="Super active (twice/day)" >Super active (twice/day)</label>
+         </div>
+      </div>
+
+	<div class="form-group">
+      <input type="submit" class="form-control" placeholder="Submit">
+      </div>
+  </div>
+
+
+</form>
+
+  </div>
+
+{% endblock%}

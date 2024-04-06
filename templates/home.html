@@ -1,0 +1,43 @@
+{% extends "homeLayout.html" %}
+
+{% block content %}
+
+  <div id="main-content" >
+
+    <div class="box">
+      <hr><br>
+            <p> Maybe you are born with it, maybe it’s the diet<br>
+                Diet-it does the body good<br>
+                Four out of Five Dentists Recommend Balanced Diet<br>
+                Live Better through Balanced Diet<br>
+            </p>
+            <hr><br>
+        <div>
+          {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              <ul class=flashes>
+              {% for message in messages %}
+              <h4>  <b><li>{{ message }}</li></b></h3>
+              {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
+
+          <a href="/createDiet">
+      		<div id="subbox" class="col-md-6">CREATE DIET PLAN</div>
+          </a>
+          <a href="/changeDiet">
+      		<div id="subbox" class="col-md-6">CHANGE DIET</div>
+          </a>
+          <a href="/myDiet">
+			    <div id="subbox" class="col-md-6">SHOW FOOD LIST</div>
+          </a>
+
+          <a href="/editProfile">
+          <div id="subbox" class="col-md-6">EDIT PROFILE</div>
+          </a>
+
+		</div>
+      </div>
+    </div>
+{% endblock %}
